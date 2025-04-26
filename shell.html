@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dalai Lama | Website</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+    #topbar {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 50, 0.8);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      padding: 10px;
+      backdrop-filter: blur(10px);
+    }
+
+    #topbar a {
+      color: #00f2ff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #music-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00f2ff;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+   
+  <!-- Music -->
+  <audio id="background-music" loop autoplay>
+    <source src="tibetan music.mp3" type="audio/mp3">
+  </audio>
+  <button id="music-toggle" onclick="toggleMusic()">🔊</button>
+
+
+
+  <!-- Main Content -->
+  <iframe id="main-frame" src="index.html"></iframe>
+
+  <script>
+    function toggleMusic() {
+      const music = document.getElementById('background-music');
+      if (music.paused) music.play(); else music.pause();
+    }
+
+    function loadPage(page) {
+      document.getElementById('main-frame').src = page;
+    }
+
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#00f2ff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00f2ff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          out_mode: "out"
+        }
+      }
+    });
+  </script>
+</body>
+</html>

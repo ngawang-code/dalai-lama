@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Timeline | Dalai Lama</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Inter&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .timeline-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+    .timeline-year {
+      background: rgba(0, 0, 50, 0.4);
+      border: 2px solid #00f2ff80;
+      border-radius: 15px;
+      backdrop-filter: blur(12px);
+      padding: 20px;
+      width: 320px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .timeline-year:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #00f2ff40;
+    }
+    .timeline-year h3 {
+      font-size: 1.6em;
+      margin-bottom: 8px;
+    }
+    .timeline-details {
+      display: none;
+      margin-top: 10px;
+      border-top: 1px solid #00f2ff40;
+      padding-top: 10px;
+    }
+    .timeline-details ul { list-style: none; padding: 0; }
+    .timeline-details li { margin: 6px 0; }
+    .filter-buttons, .search-box {
+      text-align: center;
+      margin: 20px;
+    }
+    .filter-buttons button, .search-box input {
+      padding: 10px 16px;
+      border-radius: 20px;
+      margin: 5px;
+      font-weight: bold;
+      border: none;
+      background: #00f2ff;
+      color: #000;
+    }
+    .search-box input {
+      width: 250px;
+    }
+  </style>
+</head>
+<body class="futuristic-bg">
+  <div id="particles-js"></div>
+
+  <header>
+    <h1 class="glow">Timeline of His Holiness</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timeline.html" class="active">Timeline</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search by keyword..." onkeyup="searchTimeline()">
+    </div>
+
+    <div class="filter-buttons">
+      <button onclick="filterTimeline('all')">All</button>
+      <button onclick="filterTimeline('1935s')">1935s</button>
+      <button onclick="filterTimeline('1940s')">1940s</button>
+      <button onclick="filterTimeline('1949s')">1949s</button>
+      <button onclick="filterTimeline('1950s')">1950s</button>
+      <button onclick="filterTimeline('1963s')">1963s</button>
+      <button onclick="filterTimeline('1973s')">1973s</button>
+      <button onclick="filterTimeline('1979s')">1979s</button>
+      <button onclick="filterTimeline('1987s')">1987s</button>
+      <button onclick="filterTimeline('1989s')">1989s</button>
+      <button onclick="filterTimeline('1991s')">1991s</button>
+      <button onclick="filterTimeline('1999s')">1999s</button>
+      <button onclick="filterTimeline('2001s')">2001s</button>
+      <button onclick="filterTimeline('2007s')">2007s</button>
+      <button onclick="filterTimeline('2008s')">2008s</button>
+      <button onclick="filterTimeline('2010s')">2010s</button>
+      <button onclick="filterTimeline('2014s')">2014s</button>
+      <button onclick="filterTimeline('2017s')">2017s</button>
+      <button onclick="filterTimeline('2020s')">2020s</button>
+      <button onclick="filterTimeline('2021s')">2021s</button>
+      <button onclick="filterTimeline('2022s')">2022s</button>
+      <button onclick="filterTimeline('2023s')">2023s</button>
+      <button onclick="filterTimeline('2024s')">2024s</button>
+      <button onclick="filterTimeline('2025s')">2025s</button>
+    </div>
+
+    <section class="timeline-wrapper" id="timeline">
+      <!-- 1935 -->
+      <div class="timeline-year 1935ss" onclick="toggleDetails(this)">
+        <h3>1935</h3>
+        <p>Birth in Taktser, Tibet</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>July 6:</strong> Birth of Lhamo Thondup</li>
+            <li><strong>October:</strong> Signs of reincarnation observed</li>
+          </ul>
+        </div>
+      </div>
+
+<div class="timeline-year 1940s" onclick="toggleDetails(this)">
+  <h3>1940</h3>
+  <p>Enthroned as the 14th Dalai Lama</p>
+  <div class="timeline-details">
+    <ul>
+      <li><strong>February:</strong> Enthroned in Lhasa at age 4</li>
+      <li><strong>Spring:</strong> Begins formal studies in Buddhist philosophy</li>
+    </ul>
+  </div>
+</div>
+
+<div class="timeline-year 1949s" onclick="toggleDetails(this)">
+  <h3>1949</h3>
+  <p>Chinese Invasion Begins</p>
+  <div class="timeline-details">
+    <ul>
+      <li><strong>October:</strong> Chinese military enters eastern Tibet</li>
+      <li><strong>Year-end:</strong> Tibet appeals to the United Nations</li>
+    </ul>
+  </div>
+</div>
+
+
+    
+
+      <!-- 1950 -->
+      <div class="timeline-year 1950s" onclick="toggleDetails(this)">
+        <h3>1950</h3>
+        <p>Takes political leadership</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>March:</strong> Recognized as 14th Dalai Lama</li>
+            <li><strong>November:</strong> Assumes full political power</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 1959 -->
+      <div class="timeline-year 1959s" onclick="toggleDetails(this)">
+        <h3>1959</h3>
+        <p>Flees to India</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>March 10:</strong> Uprising begins</li>
+            <li><strong>March 31:</strong> Arrives in India</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 1963 -->
+      <div class="timeline-year 1960s" onclick="toggleDetails(this)">
+        <h3>1963</h3>
+        <p>First democratic constitution in exile</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>March:</strong> Charter presented to Tibetan Assembly</li>
+            <li><strong>July:</strong> Supports speech & religion freedom</li>
+            <li><strong>September:</strong> Education reform for exiled youth</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 1973 -->
+      <div class="timeline-year 1970s" onclick="toggleDetails(this)">
+        <h3>1973</h3>
+        <p>First trip to the West</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>May:</strong> Visits Rome, Geneva, and London</li>
+            <li><strong>July:</strong> Meets with Western scientists</li>
+          </ul>
+        </div>
+      </div>
+ 
+<div class="timeline-year 1979s" onclick="toggleDetails(this)">
+  <h3>1979</h3>
+  <p>First Invitation to China</p>
+  <div class="timeline-details">
+    <ul>
+      <li><strong>June:</strong> Chinese authorities invite Tibetan representatives</li>
+      <li><strong>Fall:</strong> Dialogue begins on autonomy</li>
+    </ul>
+  </div>
+</div>
+
+<div class="timeline-year 1987s" onclick="toggleDetails(this)">
+  <h3>1987</h3>
+  <p>Proposes Tibetan Peace Plan</p>
+  <div class="timeline-details">
+    <ul>
+      <li><strong>September:</strong> Presents peace plan to U.S. Congress</li>
+      <li><strong>Key Point:</strong> Calls for demilitarized zone in Tibet</li>
+    </ul>
+  </div>
+</div>
+ <!-- 1989 -->
+      <div class="timeline-year 1989s" onclick="toggleDetails(this)">
+        <h3>1989</h3>
+        <p>Nobel Peace Prize</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>December:</strong> Awarded Nobel Peace Prize in Oslo</li>
+          </ul>
+        </div>
+      </div>
+ 
+<div class="timeline-year 1991s" onclick="toggleDetails(this)">
+  <h3>1991</h3>
+  <p>Visits Soviet Union</p>
+  <div class="timeline-details">
+    <ul>
+      <li><strong>April:</strong> Promotes dialogue and interfaith peace in Russia</li>
+    </ul>
+  </div>
+</div>
+
+<div class="timeline-year 1999s" onclick="toggleDetails(this)">
+  <h3>1999</h3>
+  <p>Promotes Global Ethics</p>
+  <div class="timeline-details">
+    <ul>
+      <li><strong>Year-round:</strong> Promotes secular ethics and global responsibility</li>
+    </ul>
+  </div>
+</div>
+
+<div class="timeline-year 2001s" onclick="toggleDetails(this)">
+  <h3>2001</h3>
+  <p>First Elected Kalon Tripa</p>
+  <div class="timeline-details">
+    <ul>
+      <li><strong>August:</strong> Samdhong Rinpoche becomes first elected prime minister in exile</li>
+    </ul>
+  </div>
+</div>
+
+
+
+      <!-- 2007 -->
+      <div class="timeline-year 2000s" onclick="toggleDetails(this)">
+        <h3>2007</h3>
+        <p>U.S. Congressional Gold Medal</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>October 17:</strong> Honored by U.S. Congress</li>
+            <li><strong>Fall:</strong> Meets interfaith & global leaders</li>
+          </ul>
+        </div>
+      </div>
+  
+<div class="timeline-year 2008s" onclick="toggleDetails(this)">
+  <h3>2008</h3>
+  <p>Tibet Protests & Response</p>
+  <div class="timeline-details">
+    <ul>
+      <li><strong>March:</strong> Calls for nonviolence after protests in Lhasa</li>
+    </ul>
+  </div>
+</div>
+
+
+      <!-- 2011 -->
+      <div class="timeline-year 2011s" onclick="toggleDetails(this)">
+        <h3>2011</h3>
+        <p>Retires from political role</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>March:</strong> Announces retirement</li>
+            <li><strong>August:</strong> Prime Minister elected</li>
+          </ul>
+        </div>
+      </div>
+ 
+<div class="timeline-year 2014s" onclick="toggleDetails(this)">
+  <h3>2014</h3>
+  <p>79th Birthday in Ladakh</p>
+  <div class="timeline-details">
+    <ul>
+      <li><strong>July 6:</strong> Celebrated with 100,000 people in Leh</li>
+    </ul>
+  </div>
+</div>
+
+<div class="timeline-year 2017s" onclick="toggleDetails(this)">
+  <h3>2017</h3>
+  <p>Releases Message of Joy</p>
+  <div class="timeline-details">
+    <ul>
+      <li><strong>July:</strong> Encourages joy through compassion and mental resilience</li>
+    </ul>
+  </div>
+</div>
+
+
+
+      <!-- 2020 -->
+      <div class="timeline-year 2020s" onclick="toggleDetails(this)">
+        <h3>2020</h3>
+        <p>Guidance during pandemic</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>April:</strong> Message of compassion</li>
+            <li><strong>May–Dec:</strong> Online meditations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="timeline-year 2021s" onclick="toggleDetails(this)">
+        <h3>2021</h3>
+        <p>Virtual teachings & climate</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>March:</strong> Global talk with students</li>
+            <li><strong>November:</strong> Urges climate action</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="timeline-year 2022s" onclick="toggleDetails(this)">
+        <h3>2022</h3>
+        <p>Global peace advocacy</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>February:</strong> Peace message on Ukraine</li>
+            <li><strong>July:</strong> 87th birthday meditations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="timeline-year 2023s" onclick="toggleDetails(this)">
+        <h3>2023</h3>
+        <p>Focus on ethics & mental health</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>March:</strong> Compassion in schools</li>
+            <li><strong>October:</strong> Dialogue with scientists</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="timeline-year 2024s" onclick="toggleDetails(this)">
+        <h3>2024</h3>
+        <p>International outreach</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>June:</strong> Ethics talks at Indian universities</li>
+            <li><strong>December:</strong> World Peace Conference</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2025 -->
+      <div class="timeline-year 2025s" onclick="toggleDetails(this)">
+        <h3>2025</h3>
+        <p>90th Birthday Celebrations</p>
+        <div class="timeline-details">
+          <ul>
+            <li><strong>July 6:</strong> Global celebration</li>
+            <li><strong>Year-round:</strong> Exhibitions & peace forums</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+     function toggleDetails(card) {
+      const detail = card.querySelector('.timeline-details');
+      detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function filterTimeline(decade) {
+      const cards = document.querySelectorAll('.timeline-year');
+      cards.forEach(card => {
+        card.style.display = (decade === 'all' || card.classList.contains(decade)) ? 'block' : 'none';
+      });
+    }
+
+    function searchTimeline() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.timeline-year');
+      cards.forEach(card => {
+        card.style.display = card.textContent.toLowerCase().includes(input) ? 'block' : 'none';
+      });
+    }
+
+    function toggleMusic() {
+      const music = document.getElementById('background-music');
+      if (music.paused) music.play(); else music.pause();
+    }
+
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#00f2ff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true, distance: 150, color: "#00f2ff", opacity: 0.4, width: 1
+        },
+        move: { enable: true, speed: 2, direction: "none", out_mode: "out" }
+      }
+    });
+  </script>
+</body>
+</html>
