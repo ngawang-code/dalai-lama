@@ -108,7 +108,7 @@
 
     <section class="timeline-wrapper" id="timeline">
       <!-- 1935 -->
-      <div class="timeline-year 1935ss" onclick="toggleDetails(this)">
+      <div class="timeline-year 1935s" onclick="toggleDetails(this)">
         <h3>1935</h3>
         <p>Birth in Taktser, Tibet</p>
         <div class="timeline-details">
@@ -169,7 +169,7 @@
       </div>
 
       <!-- 1963 -->
-      <div class="timeline-year 1960s" onclick="toggleDetails(this)">
+      <div class="timeline-year 1963s" onclick="toggleDetails(this)">
         <h3>1963</h3>
         <p>First democratic constitution in exile</p>
         <div class="timeline-details">
@@ -182,7 +182,7 @@
       </div>
 
       <!-- 1973 -->
-      <div class="timeline-year 1970s" onclick="toggleDetails(this)">
+      <div class="timeline-year 1973s" onclick="toggleDetails(this)">
         <h3>1973</h3>
         <p>First trip to the West</p>
         <div class="timeline-details">
@@ -258,7 +258,7 @@
 
 
       <!-- 2007 -->
-      <div class="timeline-year 2000s" onclick="toggleDetails(this)">
+      <div class="timeline-year 2007s" onclick="toggleDetails(this)">
         <h3>2007</h3>
         <p>U.S. Congressional Gold Medal</p>
         <div class="timeline-details">
@@ -427,5 +427,20 @@
       }
     });
   </script>
+<script>
+  function toggleDetails(element) {
+    const details = element.querySelector('.timeline-details');
+    if (details.style.display === 'block') {
+      details.style.display = 'none';
+    } else {
+      details.style.display = 'block';
+    }
+  }
+</script>
+  function toggleDetails(element) {
+    element.classList.toggle('open');
+  }
+</script>
+
 </body>
 </html>
